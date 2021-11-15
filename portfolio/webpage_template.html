@@ -1,0 +1,105 @@
+<DOCTYPE html>
+    <!--
+    CHRISTOPHER SCOTT 
+    "webpage_templete.html" 
+    10/17/2021
+    WK7
+    -->
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- <script src="scripts/jquery-3.6.0.min.js"></script> -->
+        
+        <title>Website Template</title>
+    </head>
+
+    <body>
+        <!--NAVIGATION CONTROL; HAS A FIXED POSITION TO FOLLOW ON PAGE SCROLL-->
+        <nav class="navbar-sticky" id='navbar'>
+
+            <!--THIS IS FOR MOBILE-->
+            <div id="mobile-btn" class="menu-button-container" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul style="display: none;" id="myModal" class="modal-nav">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="shoppinglist.html">All Items</a></li>
+            </ul>
+
+            <!--THIS IS FOR THE DESKTOP VIEWPORT-->
+            <ul id="desktopNav" class="centerLeftMargin">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="shoppinglist.html">All Items</a></li>
+            </ul>
+            <a href="index.html"><img class="logo-menu" src="./images/web_logo.png" alt="website logo"></a>
+            <ul class="centerRightMargin">
+                <li><a href="shoppingcart.html"><span class="material-icons">shopping_cart</span></a></li>
+                <li><a href="account.html" onclick="checkForUsername(this)"><span
+                            class="material-icons">account_circle</span></a></li>
+                <l1>
+                    <h2 id="welcomeUser" class="welcome-user"></h2>
+                </l1>
+            </ul>
+        </nav>
+        <div id="contentSpacer" style="height: 100px"></div>
+
+
+        <!--SITE CONTAINER FOR EASY RESIZING; ALL CONTENT GOES IN HERE-->
+        <div class="site-container" id="container">
+            <header class="intro" id="Intro">
+                <figure class="my-picture">
+                    <img src="images/christopherscott.jpg" alt="header_picture_not_found">
+                </figure>
+                <figcaption class="my-quote">
+                    <h2>"My mission is to create an e-commerce site for pet enthusiasts alike.
+                        I've had pets my whole life and now, I want to give back to our best friends.
+                        "
+                    </h2>
+                    <h1 style="text-align: right;">- Christopher Scott</h1>
+                </figcaption>
+            </header>
+
+            <!--MAIN CONTENT; PURPOSE IS TO SEPARATE SITE CONTENT FROM NAVIGATION ELEMENTS. HOLDS MAJORITY OF SITE ACTIVITY AND COMMANDS CENTRAL FUNCTIONALITY-->
+            <main style="padding: 10px" id="main-content">
+            </main>
+
+            <footer style="margin-top: 0;" class="footer-flex">
+                <hr
+                    style="width: 80%; height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+                <div id="footer_Site_Links">
+                    <ul>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="shoppinglist.html">All Products</a></li>
+                        <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+
+                </div>
+                <div id="footer_Contact">
+                    <a href="contact.html">Contact Me :)</a>
+                </div>
+                <div id="footer_Copyright">
+                    <h1>Fake copyright of Christopher Scott: <a
+                            href="mailto: cscott010@my.wilmu.edu">cscott010@my.wilmu.edu</a></h1>
+                </div>
+            </footer>
+        </div>
+        <script src="scripts/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="scripts/mockDatabase.js"></script>
+    </body>
+
+    </html>

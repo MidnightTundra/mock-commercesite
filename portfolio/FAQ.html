@@ -1,0 +1,172 @@
+<DOCTYPE html>
+    <!--
+    CHRISTOPHER SCOTT 
+    "FAQ.html" 
+    10/17/2021
+    WK7
+    -->
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- <script src="scripts/jquery-3.6.0.min.js"></script> -->
+
+        <title>Company FAQ</title>
+    </head>
+
+    <body>
+        <!--NAVIGATION CONTROL; HAS A FIXED POSITION TO FOLLOW ON PAGE SCROLL-->
+        <nav class="navbar-sticky" id='navbar'>
+
+            <!--THIS IS FOR MOBILE-->
+            <div id="mobile-btn" class="menu-button-container" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul style="display: none;" id="myModal" class="modal-nav">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="shoppinglist.html">All Items</a></li>
+            </ul>
+
+            <!--THIS IS FOR THE DESKTOP VIEWPORT-->
+            <ul id="desktopNav" class="centerLeftMargin">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="shoppinglist.html">All Items</a></li>
+            </ul>
+            <a href="index.html"><img class="logo-menu" src="./images/web_logo.png" alt="website logo"></a>
+            <ul class="centerRightMargin">
+                <li><a href="shoppingcart.html"><span class="material-icons">shopping_cart</span></a></li>
+                <li><a href="account.html" onclick="checkForUsername(this)"><span
+                            class="material-icons">account_circle</span></a></li>
+                <l1>
+                    <h2 id="welcomeUser" class="welcome-user"></h2>
+                </l1>
+            </ul>
+        </nav>
+        <div id="contentSpacer" style="height: 100px"></div>
+
+
+        <!--SITE CONTAINER FOR EASY RESIZING; ALL CONTENT GOES IN HERE-->
+        <div class="site-container" id="container">
+            <header id="Intro">
+                <figure>
+                    <h1>Hey!</h1>
+                </figure>
+                <figcaption class="my-quote">
+                    <h2>Need some questions answered?
+                    </h2>
+                </figcaption>
+            </header>
+
+            <!--MAIN CONTENT; PURPOSE IS TO SEPARATE SITE CONTENT FROM NAVIGATION ELEMENTS. HOLDS MAJORITY OF SITE ACTIVITY AND COMMANDS CENTRAL FUNCTIONALITY-->
+            <main style="padding: 10px" id="main-content">
+
+                <section id="FAQ_1">
+                    <div style="padding: 20px; ">
+                        <h1>Q: How are your products shipped?</h1>
+                        <h2>A: We use the best shipping cariers available for your country and region specific to you!
+                        </h2>
+                    </div>
+                    <div style="padding: 20px;">
+                        <h1>Q: Are your products pet safe?</h1>
+                        <h2>A: All of our products are highly rated and tested to be pet safe by our auditors for the
+                            best quality. </h2>
+                    </div>
+                    <div style="padding: 20px;">
+                        <h1>Q: Is my data safe?</h1>
+                        <h2>A: We use industry standard software and practices for running our e-commerce website. Shopify is an industry standard thats under our toolbelt! </h2>
+                    </div>
+                    
+
+                    <div style="padding: 20px;">
+                        <h1>Q: Whats your shipping price model per region?</h1>
+                        <h2>A: Our item shipping costs are based off of region and estimated in USD below: </h2>
+                    </div>
+                </section>
+                <section>
+                    <div style="width: 80%; justify-content: flex-start;" id="child_Leagues" class="form-section">
+                        <h1>Regional Shipping Prices</h1>
+                        <table id="table_Dataset" style="color: white; width: 1000px;  height: 500px;">
+                            <tr style="text-align: left;">
+                                <th>Country/Continent Shipping Costs</th>
+                                <th>Shipping Cost (May Vary.)</th>
+                                <th>1-Day Delivery</th>
+                            </tr>
+                            <tr>
+                                <td>United States</td>
+                                <td>$5.99</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Japan</td>
+                                <td>$8.99</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>United Kingdom</td>
+                                <td>$7.99</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>China</td>
+                                <td>$15.99</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Asia (Excluding China & Japan)</td>
+                                <td>$11.99</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Europe (Excluding UK)</td>
+                                <td>$12.99</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Africa</td>
+                                <td>$10.99</td>
+                                <td>Yes</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </section>
+            </main>
+
+            <footer style="margin-top: 0;" class="footer-flex">
+                <hr
+                    style="width: 80%; height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+                <div id="footer_Site_Links">
+                    <ul>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="shoppinglist.html">All Products</a></li>
+                        <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+
+                </div>
+                <div id="footer_Contact">
+                    <a href="contact.html">Contact Me :)</a>
+                </div>
+                <div id="footer_Copyright">
+                    <h1>Fake copyright of Christopher Scott: <a
+                            href="mailto: cscott010@my.wilmu.edu">cscott010@my.wilmu.edu</a></h1>
+                </div>
+            </footer>
+        </div>
+        <script src="scripts/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="scripts/mockDatabase.js"></script>
+    </body>
+
+    </html>

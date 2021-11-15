@@ -1,0 +1,242 @@
+<DOCTYPE html>
+    <!--
+    CHRISTOPHER SCOTT 
+    "index.html" 
+    10/17/2021
+    WK7
+    -->
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/slideshowHome.css">
+        <link rel="stylesheet" href="css/itemcard.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- <script src="scripts/jquery-3.6.0.min.js"></script> -->
+        <title>Home Page</title>
+    </head>
+
+    <body>
+        <!--NAVIGATION CONTROL; HAS A FIXED POSITION TO FOLLOW ON PAGE SCROLL-->
+        <nav class="navbar-sticky" id='navbar'>
+
+            <!--THIS IS FOR MOBILE-->
+            <div id="mobile-btn" class="menu-button-container" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul style="display: none;" id="myModal" class="modal-nav">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="shoppinglist.html">All Items</a></li>
+            </ul>
+
+            <!--THIS IS FOR THE DESKTOP VIEWPORT-->
+            <ul id="desktopNav" class="centerLeftMargin">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="shoppinglist.html">All Items</a></li>
+            </ul>
+            <a href="index.html"><img class="logo-menu" src="./images/web_logo.png" alt="website logo"></a>
+            <ul class="centerRightMargin">
+                <li><a href="shoppingcart.html"><span class="material-icons">shopping_cart</span></a></li>
+                <li><a href="account.html" onclick="checkForUsername(this)"><span
+                            class="material-icons">account_circle</span></a></li>
+                <l1>
+                    <h2 id="welcomeUser" class="welcome-user"></h2>
+                </l1>
+            </ul>
+        </nav>
+        <div id="contentSpacer" style="height: 100px"></div>
+
+
+        <!--SITE CONTAINER FOR EASY RESIZING; ALL CONTENT GOES IN HERE-->
+        <div class="spacer" style="position: relative; top: 0px;"></div>
+        <div class="site-container" id="container">
+            <!--HEADER BEGINS HERE-->
+            <header class="intro" id="Intro">
+                <figure class="my-picture">
+                    <img src="images/christopherscott.jpg" alt="header_picture_not_found">
+                </figure>
+                <figcaption class="my-quote">
+                    <h2>"My mission is to create an e-commerce site for pet enthusiasts alike.
+                        I've had pets my whole life and now, I want to give back to our best friends.
+                        "
+                    </h2>
+                    <h1 style="text-align: right;">- Christopher Scott</h1>
+                </figcaption>
+            </header>
+
+            <!--MAIN CONTENT; PURPOSE IS TO SEPARATE SITE CONTENT FROM NAVIGATION ELEMENTS. HOLDS MAJORITY OF SITE ACTIVITY AND COMMANDS CENTRAL FUNCTIONALITY-->
+            <main id="main-content">
+                <h1 style="margin: auto; padding: 10px;">Welcome To Pet Start</h1>
+                <!--SLIDE SHOW CONTENT USED FOR FUTURE CONTENT FEATURE-->
+                <section id="slideShow" class="image-slideshow">
+
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="./images/slideshow_01.jpg" style="position: absolute; top: -35%; left: 0;">
+                            
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="./images/slideshow_02.jpg" style="width:100%">
+                            
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="./images/slideshow_03.jpg" style="position: absolute; top: -15%; left: 0;">
+                            
+                        </div>
+                        <!--
+                        <div style="text-align:center">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    -->
+
+                    </div>
+                </section>
+
+                <!-- ABOUT US / COMPANY STATEMENT -->
+                <section style="height: 50vh; width: 80%; border: solid white 3px; border-radius: 10px;" class="row-flex"
+                    id="companyStatement">
+                    <div style="align-self: flex-start;" class="company-Info" id="aboutUs">
+                        <h2>About Us</h2>
+                        <p>We're a company looking to drive it home: Pets are family. </p>
+                        <p>This storefront is for those who want to show their loved ones appreciation for their loyalty
+                            and companionship.
+                        </p>
+                    </div>
+                    <div class="break-line"></div>
+                    <div class="company-Info" id="companyServices">
+                        <h2>Our Services</h2>
+                        <p>As an ecommerce site, it is our job for us to, quickly and confidently, get what you need.
+                        </p>
+                        <p>We provide an easy checkout solution to readily amass what you want and quickly ship it to
+                            your home address.
+                            We sell all types of pet accessories, food, toys and more!
+                        </p>
+                    </div>
+                </section>
+                <!--RANDOMLY GENERATED CARDS/ WILL BE POPULATED ONCE I SET UP FAKE DATABASE QUERIES-->
+                <section style="flex-direction: column; align-items: center;" id="homePageItems">
+                    <h2>Here's some items that might suit your little buddy!</h2>
+                    <div style="flex-wrap: nowrap; overflow-x: auto;" class="items-body"></div>
+                </section>
+
+
+                <!--BRAND NAME STRIP-->
+                <section style="flex-wrap: wrap; width: 100%;" id=="brand_Demo">
+                    <h2 style="text-align: center; width: 100%;">We have what you need!</h2>
+                    <div style="width: 100%;" id="list_Of_Brands">
+                        <ul class="brand-tray">
+                            <li><img src="images/brandImg/blue_buffalo_logo.png" alt="blue_buffalo"
+                                    style="height: auto; width: 100px;"></li>
+                            <li><img src="images/brandImg/pet_co_logo.jpg" alt="Pet_Co"
+                                    style="height: auto; width: 100px;"></li>
+                            <li><img src="images/brandImg/pedigree_logo.jpg" alt="Pedigree"
+                                    style="height: auto; width: 100px;"></li>
+                            <li><img src="images/brandImg/nulo_logo.png" alt="Nulo" style="height: auto; width: 100px;">
+                            </li>
+                            <li><img src="images/brandImg/iams_logo.png" alt="IAMS" style="height: auto; width: 100px;">
+                            </li>
+                            <li><img src="images/brandImg/purina_logo.png" alt="Purina"
+                                    style="height: auto; width: 100px;"></li>
+                            <li><img src="images/brandImg/petmate_logo.png" alt="Petmate"
+                                    style="height: auto; width: 100px;"></li>
+                            <li><img src="images/brandImg/happypet_logo.png" alt="Happy_Pet"
+                                    style="height: auto; width: 100px;"></li>
+                        </ul>
+
+                    </div>
+                </section>
+
+
+                <!--BRAND ADVERTISEMENT IMAGE-->
+                <section style="margin: 40px auto 0px auto" id="">
+                    <div class="row-flex">
+                        <h2 style="">Curious about our products?</h2>
+                        <img style="height: auto; max-width: 70%;" src="./images/dog-looking-up.png">
+                        <h2>Check our featured brands!</h2>
+                    </div>
+
+                </section>
+            </main>
+            <!-- FOOTER AREA BELOW-->
+            <footer style="margin-top: 0;" class="footer-flex">
+                <hr
+                    style="width: 80%; height:2px; border-width:0; color:rgb(255, 255, 255); background-color:rgb(255, 255, 255)">
+                <div id="footer_Site_Links">
+                    <ul>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="shoppinglist.html">All Products</a></li>
+                        <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+
+                </div>
+                <div id="footer_Contact">
+                    <a href="contact.html">Contact Me :)</a>
+                </div>
+                <div id="footer_Copyright">
+                    <h1>Fake copyright of Christopher Scott: <a
+                            href="mailto: cscott010@my.wilmu.edu">cscott010@my.wilmu.edu</a></h1>
+                </div>
+            </footer>
+        </div>
+        <div id="fixedNotify" class="fixed-notify">
+            <h1>Added to Cart!</h1>
+        </div>
+        <div class="spacer"></div>
+
+        <!-- SCRIPTS BELOW -->
+        <script src="scripts/scrollLock.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/homePage.js"></script>
+        <script src="scripts/itemObjectsLocal.js"></script>
+        <script src="scripts/itemManagement.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            //Courtesy of w3schools for set up. Slide show to be used in future
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                //var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                /*
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                */
+                slides[slideIndex - 1].style.display = "block";
+                //dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 3000); // Change image every 2 seconds
+            }
+        </script>
+
+    </body>
+
+    </html>

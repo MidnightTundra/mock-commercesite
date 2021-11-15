@@ -1,0 +1,136 @@
+<DOCTYPE html>
+    <!--
+    CHRISTOPHER SCOTT 
+    "login.html" 
+    10/17/2021
+    WK7
+    -->
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/account.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- <script src="scripts/jquery-3.6.0.min.js"></script> -->
+        <script src="itemObjectsLocal.js"></script>
+        <title>Log In</title>
+    </head>
+
+    <body>
+         <!--NAVIGATION CONTROL; HAS A FIXED POSITION TO FOLLOW ON PAGE SCROLL-->
+        <nav class="navbar-sticky" id='navbar'>
+
+            <!--THIS IS FOR MOBILE-->
+            <div id="mobile-btn" class="menu-button-container" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul style="display: none;" id="myModal" class="modal-nav">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="shoppinglist.html">All Items</a></li>
+            </ul>
+
+            <!--THIS IS FOR THE DESKTOP VIEWPORT-->
+            <ul id="desktopNav" class="centerLeftMargin">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="shoppinglist.html">All Items</a></li>
+            </ul>
+            <a href="index.html"><img class="logo-menu" src="./images/web_logo.png" alt="website logo"></a>
+            <ul class="centerRightMargin">
+                <li><a href="shoppingcart.html"><span class="material-icons">shopping_cart</span></a></li>
+                <li><a href="account.html" onclick="checkForUsername(this)"><span
+                            class="material-icons">account_circle</span></a></li>
+                <l1>
+                    <h2 id="welcomeUser" class="welcome-user"></h2>
+                </l1>
+            </ul>
+        </nav>
+        <div id="contentSpacer" style="height: 100px"></div>
+
+
+        <!--SITE CONTAINER FOR EASY RESIZING; ALL CONTENT GOES IN HERE-->
+        <div class="spacer" style="position: relative; top: 0px;"></div>
+        <div class="site-container" id="container">
+
+
+            <!--MAIN CONTENT; PURPOSE IS TO SEPARATE SITE CONTENT FROM NAVIGATION ELEMENTS. HOLDS MAJORITY OF SITE ACTIVITY AND COMMANDS CENTRAL FUNCTIONALITY-->
+            <main style="padding: 10px" id="main-content">
+                <!--Log In section-->
+                <section style = "align-items: center; flex-direction: column;"id="log_in">
+                    <h1 style="padding: 20px;">Log In with Username</h1>
+                    <form action="index.html" id="Form_Log_In" onsubmit="logIn(this);">
+                        <div style = "justify-content: center" class="label-section">
+                            <input  class ="text-entry" id="username" name="username" placeholder="Username" type="text">
+                        </div>
+
+                        <div style="padding-bottom: 50px; justify-content: center;" class="label-section">
+                            <input class="submit-entry" id="submit" type="submit" value="Submit">
+                        </div>
+
+                </section>
+
+                <!--BRAND NAME STRIP-->
+                <section style="flex-wrap: wrap; width: 100%;" id=="brand_Demo">
+                    <h2 style="text-align: center; width: 100%;">We have what you need!</h2>
+                    <div style="width: 100%;" id="list_Of_Brands">
+                        <ul class="brand-tray">
+                            <li><img src="images/brandImg/blue_buffalo_logo.png" alt="blue_buffalo"
+                                    style="height: auto; width: 100px;"></li>
+                            <li><img src="images/brandImg/pet_co_logo.jpg" alt="Pet_Co"
+                                    style="height: auto; width: 100px;"></li>
+                            <li><img src="images/brandImg/pedigree_logo.jpg" alt="Pedigree"
+                                    style="height: auto; width: 100px;"></li>
+                            <li><img src="images/brandImg/nulo_logo.png" alt="Nulo" style="height: auto; width: 100px;">
+                            </li>
+                            <li><img src="images/brandImg/iams_logo.png" alt="IAMS" style="height: auto; width: 100px;">
+                            </li>
+                            <li><img src="images/brandImg/purina_logo.png" alt="Purina"
+                                    style="height: auto; width: 100px;"></li>
+                            <li><img src="images/brandImg/petmate_logo.png" alt="Petmate"
+                                    style="height: auto; width: 100px;"></li>
+                            <li><img src="images/brandImg/happypet_logo.png" alt="Happy_Pet"
+                                    style="height: auto; width: 100px;"></li>
+                        </ul>
+
+                    </div>
+                </section>
+            </main>
+
+            <footer style="margin-top: 0;" class="footer-flex">
+                <hr
+                    style="width: 80%; height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+                <div id="footer_Site_Links">
+                    <ul>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="shoppinglist.html">All Products</a></li>
+                        <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+
+                </div>
+                <div id="footer_Contact">
+                    <a href="contact.html">Contact Me :)</a>
+                </div>
+                <div id="footer_Copyright">
+                    <h1>Fake copyright of Christopher Scott:<a
+                            href="mailto: cscott010@my.wilmu.edu">cscott010@my.wilmu.edu</a></h1>
+                </div>
+            </footer>
+        </div>
+        <div class="spacer"></div>
+        </div>
+        <script src="scripts/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="scripts/mockDatabase.js"></script>
+    </body>
+
+    </html>

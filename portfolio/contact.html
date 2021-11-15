@@ -1,0 +1,121 @@
+<DOCTYPE html>
+    <!--
+    CHRISTOPHER SCOTT 
+    "contact.html" 
+    10/17/2021
+    WK7
+    -->
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- <script src="scripts/jquery-3.6.0.min.js"></script> -->
+        <title>Contact Us</title>
+    </head>
+
+    <body>
+          <!--NAVIGATION CONTROL; HAS A FIXED POSITION TO FOLLOW ON PAGE SCROLL-->
+        <nav class="navbar-sticky" id='navbar'>
+
+            <!--THIS IS FOR MOBILE-->
+            <div id="mobile-btn" class="menu-button-container" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul style="display: none;" id="myModal" class="modal-nav">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="shoppinglist.html">All Items</a></li>
+            </ul>
+
+            <!--THIS IS FOR THE DESKTOP VIEWPORT-->
+            <ul id="desktopNav" class="centerLeftMargin">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="shoppinglist.html">All Items</a></li>
+            </ul>
+            <a href="index.html"><img class="logo-menu" src="./images/web_logo.png" alt="website logo"></a>
+            <ul class="centerRightMargin">
+                <li><a href="shoppingcart.html"><span class="material-icons">shopping_cart</span></a></li>
+                <li><a href="account.html" onclick="checkForUsername(this)"><span
+                            class="material-icons">account_circle</span></a></li>
+                <l1>
+                    <h2 id="welcomeUser" class="welcome-user"></h2>
+                </l1>
+            </ul>
+        </nav>
+        <div id="contentSpacer" style="height: 100px"></div>
+
+
+        <!--SITE CONTAINER FOR EASY RESIZING; ALL CONTENT GOES IN HERE-->
+        <div class="spacer" style="position: relative; top: 0px;"></div>
+        <div class="site-container" id="container">
+            <header style="height: 50vh" id="Intro">
+                <figure><h1>Hi, I'm Christopher Scott</h1></figure>
+                <figcaption><h2>If you wanna contact me. Here's my info!</h2></figcaption>
+
+            </header>
+
+            <!--MAIN CONTENT; PURPOSE IS TO SEPARATE SITE CONTENT FROM NAVIGATION ELEMENTS. HOLDS MAJORITY OF SITE ACTIVITY AND COMMANDS CENTRAL FUNCTIONALITY-->
+            <main style="padding: 10px" id="main-content">
+                <hr style="width: 80%; height:2px; border-width:0; color:rgb(255, 255, 255); background-color:rgb(255, 255, 255)">
+                <section id="contact-info">
+                    <div class="contact-list">
+                        <h2 style="text-align: center;">Here's how to reach me</h2>
+                        <ul style="align-items: flex-start">
+                            <li>Fake Phone Number: (999)-999-9999</li>
+                            <li>Email: <a
+                                href="mailto: cscott010@my.wilmu.edu">cscott010@my.wilmu.edu</a></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </section>
+
+
+                <!--EMBEDDED GOOGLE MAPS LOCATION-->
+                <section style="max-width: 100%; margin-top: 100px; flex-direction: column; align-items: center;" id="map_Of_Institution">
+                    <h2>Here's where I work :)</h2>
+                    <hr
+                    style="width: 80%; height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+                    <br>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.5629215287004!2d-75.58861858384903!3d39.68204550791404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c703b048560cd5%3A0xdee9dd3f4f637375!2sWilmington%20University!5e0!3m2!1sen!2sus!4v1631983894525!5m2!1sen!2sus"
+                        style = "max-width:100%;" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </section>
+            </main>
+
+            <!-- FOOTER AREA BELOW-->
+            <footer style="margin-top: 0;" class="footer-flex">
+                <hr
+                    style="width: 80%; height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+                <div id="footer_Site_Links">
+                    <ul>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="shoppinglist.html">All Products</a></li>
+                        <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </div>
+                <div id="footer_Contact">
+                    <a href="contact.html">Contact Me :)</a>
+                </div>
+                <div id="footer_Copyright">
+                    <h1>Fake copyright of Christopher Scott: <a
+                            href="mailto: cscott010@my.wilmu.edu">cscott010@my.wilmu.edu</a></h1>
+                </div>
+            </footer>
+        </div>
+        <div class="spacer"></div>
+        <script src="scripts/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </body>
+
+    </html>
